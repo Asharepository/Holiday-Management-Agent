@@ -16,3 +16,10 @@ venv\Scripts\Activate.ps1
 ```
 pip install -r requirements.txt
 ```
+
+4. Push changes to Github
+```
+git add .
+git commit -m "requirements added"
+git push origin main 
+```
