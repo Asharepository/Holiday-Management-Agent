@@ -5,3 +5,6 @@ autogen-core
 pytest
 pydantic
 python-dotenv
+#setup.py and -e . are used to install the ML project as a package so modules can be imported anywhere and changes reflect immediately without reinstalling.
+# this creates "egg-info" folder contains metadata about the package created during installation
+-e .
