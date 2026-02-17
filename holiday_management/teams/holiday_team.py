@@ -1,11 +1,12 @@
 from autogen_agentchat.teams import RoundRobinGroupChat
+from autogen_agentchat.conditions import MaxMessageTermination
 from holiday_management.agents.planner import planner_agent
 from holiday_management.agents.researcher import reseacher_agent
-from holiday_management.utils.utils import get_termination_condition
 
+# RoundRobin team with max 4 messages (2 turns per agent)
 team = RoundRobinGroupChat(
-    participants=[planner_agent, reseacher_agent],
-    termination_condition = get_termination_condition()
+    participants=[reseacher_agent, planner_agent],
+    termination_condition=MaxMessageTermination(max_messages=4)
 )
 
 

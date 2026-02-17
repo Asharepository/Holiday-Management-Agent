@@ -23,3 +23,7 @@ git add .
 git commit -m "requirements added"
 git push origin main 
 ```
+
+5. Run the template file which will create the required folders
+
+6. 
